@@ -45,21 +45,17 @@ python terminal.py
 
 Interaja digitando mensagens. Digite 'sair' para encerrar.
 
-## Tela Inicial (GUI)
+## Versão Mobile (APK)
 
-Para uma interface gráfica inicial, incluímos uma tela com botões para acessar as funcionalidades.
+A aplicação foi adaptada para mobile usando Kivy. Para gerar o APK Android:
 
-### Como usar a Tela Inicial
+1. Instale as dependências: `pip install kivy buildozer cython`
+2. Execute `buildozer android debug` (requer Android SDK, pode levar tempo)
+3. O APK será gerado em `bin/`
 
-Execute o script `gui.py`:
+Nota: O build do APK requer ambiente adequado com Android SDK. Em caso de problemas, consulte a documentação do Buildozer.
 
-```bash
-python gui.py
-```
-
-Clique nos botões para executar a calculadora, o terminal ou gerar a apresentação. A otimização do sistema ocorre automaticamente a cada hora em background (requer permissões sudo). O botão 'Verificar Antivírus' executa um scan usando clamav (instale com 'sudo apt install clamav' se necessário).
-
-### Solução de Problemas
+## Download
 
 - Certifique-se de ter Python instalado.
 - Para a apresentação, instale as dependências com pip.
