@@ -3,6 +3,8 @@ import google.generativeai as genai
 import os
 import requests
 from bs4 import BeautifulSoup
+import webbrowser
+import threading
 
 app = Flask(__name__)
 
@@ -98,5 +100,9 @@ sys.exit()"""
         reply = f'Erro: {e}'
     return jsonify({'reply': reply})
 
+def open_browser():
+    threading.Timer(1.5, lambda: webbrowser.open('http://127.0.0.1:5000')).start()
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    open_browser()
+    app.run(host='0.0.0.0', port=5000, debug=False)
