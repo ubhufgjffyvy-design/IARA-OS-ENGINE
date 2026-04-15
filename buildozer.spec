@@ -37,7 +37,11 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy
+requirements = python3,kivy,google-generativeai,requests,plyer
+
+# (str) Services to declare
+# Available only on Android
+# services = IaraOptimizer:service.py
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -75,6 +79,9 @@ osx.kivy_version = 1.9.1
 
 # (bool) Indicate if the application should be fullscreen or not
 fullscreen = 0
+
+# (int) Android API to use
+android.api = 21
 
 # (string) Presplash background color (for android toolchain)
 # Supported formats are: #RRGGBB #AARRGGBB or one of the following names:
